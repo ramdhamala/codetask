@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="row">
+        <table class="table">
+            <input type= "text" [(ngModel)] = "userid" placeholder=""  name="search">
+            <thead class="thead-inverse">
+            <tr>
+                <th class="text-center">LoginID</th>
+                <th class="text-center">ID</th>
+                <th class="text-center">NodeId</th>
+
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let user of data">
+                <td class="text-center" style="width: 15px;" (click)="userdata()" >{{user.login}}</td>
+                <td class="text-center" style="width: 15px;">{{user.id}}</td>
+                <td class="text-center" style="width: 200px;">{{user.node_id}}</td>
+
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
